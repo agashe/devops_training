@@ -1,0 +1,8 @@
+---
+ - name: Print env variable
+   shell: echo 'Hello Ansible :)'
+   register: print_result
+
+ - name: print message
+   debug:
+     msg: "{{ print_result.stdout_lines }}"
